@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/stm32-as5047p.elf",
+            "name": "STM32 Debug (OpenOCD)",
+            "device": "STM32F446RE",
+            "configFiles": [
+                "/usr/share/openocd/scripts/board/st_nucleo_f4.cfg"
+            ]
+        }
+    ]
+}
