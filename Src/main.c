@@ -95,6 +95,11 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  uint8_t buffer[] = "Test\n\r";
+  // HAL_UART_Transmit(&huart2, (uint8_t *)buffer, sizeof(buffer), HAL_MAX_DELAY);
+  // HAL_UART_Transmit_IT(&huart2, (uint8_t *)buffer, sizeof(buffer));
+  HAL_UART_Transmit_DMA(&huart2, (uint8_t *)buffer, sizeof(buffer));
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
